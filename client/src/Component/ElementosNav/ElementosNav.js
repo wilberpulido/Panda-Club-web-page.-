@@ -4,70 +4,75 @@ import SubMenu from '../subMenu/subMenu'
 
 let arrayMenu = [
     {
+        key: 1,
         id: 'sites',
         menu: 'Sites'
     },
     {
+        key: 2,
         id: 'benefis',
         menu:'Benefis'
     },
     {
-        id: 'pandaClub',
+        key: 3,
+        id: 'LogoNav',
         menu:'Panda CLUB'
     },
     {
-        id: 'galery',
-        menu:'Galery'
-    },
-    {
+        key: 4,
         id: 'subcription',
         menu:'Subcription'
+    },
+    {
+        key: 5,
+        id: 'galery',
+        menu:'Galery'
     }
 ]
 
+const subSites = document.getElementById('subSites');
+
 class ElementosNav extends React.Component{
     
-    constructor(props){
-        super(props);
-
-        // this.handleEventMouseOver = this.handleEventMouseOver.bind(this);
-    }
-
     handleEventMouseOver(e){
-        e.target.style.color = "red";
+        e.target.style.color = "rgb(135, 241, 144)";
+
+        if(e.target.id == 'sites'){
+            document.getElementById('subSites').style.visibility ='visible';
+        }
     };
 
     handlerEventMouseOut(e){
         e.target.style.color = "rgb(235, 255, 230)";
+
+        if(e.target.id == 'sites'){
+            document.getElementById('subSites').style.visibility = 'hidden';
+        }
+
     };
 
     render(){
-    
-        return (
+        //Retornare la lista del menu principal y los subMenu que des desplegan con los eventos
+        //onMouseOver y onMouseOut
         
-        <div>
-            <ul className='menuPrincipal'>
-               {arrayMenu.map(element=>{
-                return <li key={element.id} onMouseOver={this.handleEventMouseOver}
-                onMouseOut={this.handlerEventMouseOut}> {element.menu} </li>
-                })
-               } 
-            </ul>
-            
-            <ul className='subMenu'>
-                <SubMenu onMouseOver={this.handleEventMouseOver}/>
-            </ul>
-        </div>)
+        return (
+            <div>
+                <div>
+                    <ul className='menuPrincipal'>
+                    {arrayMenu.map(element=>{
+                        return <li id={element.id} className = 'listMenu' 
+                        onMouseOver={this.handleEventMouseOver} key={element.key}
+                        onMouseOut={this.handlerEventMouseOut}>{element.menu}</li>
+                    })
+                    } 
+                    </ul>
+                </div>
+                <div>
+                        <SubMenu />
+                </div>
+            </div>)
         
     }
 }
 
 export default ElementosNav;
-
-// <li id='sites' onMouseOver={this.handleEventMouseOver}
-// onMouseOut={this.handlerEventMouseOut}>
-// Sites</li>
-// <li id='benefis'>Benefits</li>
-// <li id='pandaClub'>PANDA CLUB</li>
-// <li id='galery'>Galery</li>
-// <li id="subcription">Subcription</li> 

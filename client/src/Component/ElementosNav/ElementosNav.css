@@ -7,22 +7,15 @@
     align-items: center;
 }
 
-.menuPrincipal li{
+.menuPrincipal .listMenu{
     padding: 5px;
     margin: 0px 20px;
+    width: 120px;
     display: inline-block;
-    width: 160px;
     text-align: center;
     cursor: pointer;
     background-color:black;
     border-radius: 15px;
-}
-
-.subMenu{
-    position: fixed;
-    color:black;
-    z-index: 3;
-    top: 45px;
 }
 
 li{
