@@ -1,9 +1,8 @@
 .subMenu{
     position: relative;
-    bottom: 35px;
-    right: 20px;
+    bottom: 45px;
+    right: 15px;
     z-index: 3;
-    background-color: rgba(20, 22, 20, 0.5  );
     color:rgb(235, 255, 230);
     display: flex;
     flex-direction: row;
@@ -15,8 +14,8 @@
 .SubMenuIndividual{
     background-color:black;
     padding: 5px;
-    margin: 5px 0px;
-    width: 120px;
+    margin:10px 0px;
+    width: 130px;
     text-align: center;
     cursor: pointer;
     border-radius: 15px;
@@ -29,8 +28,19 @@ li{
 
 #logo{
     background-color: black;
-    height: 70px;
-    border-radius: 150px;
-    margin-top: 20px;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    margin-top: 10px;
     visibility: visible;
+}
+
+#subGalery,
+#subSubcription,
+#subSites,
+#subBenefits{
+    background: content-box;
+    border-radius: 15px;
+    background-color: rgba(20, 22, 20, 0.5);
+    position: relative;
 }
