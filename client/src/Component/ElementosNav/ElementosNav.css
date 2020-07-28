@@ -1,4 +1,4 @@
-ul{
+.menuPrincipal{
     height: 90px;
     margin: 0px 40px;
     padding: 0px;
@@ -7,14 +7,24 @@ ul{
     align-items: center;
 }
 
-ul li{
+.menuPrincipal li{
     padding: 5px;
     margin: 0px 20px;
-    list-style: none;
     display: inline-block;
     width: 160px;
     text-align: center;
     cursor: pointer;
     background-color:black;
     border-radius: 15px;
+}
+
+.subMenu{
+    position: fixed;
+    color:black;
+    z-index: 3;
+    top: 45px;
+}
+
+li{
+    list-style: none;
 }
