@@ -28,8 +28,7 @@ class App extends React.Component{
         <nav>
           <Navegador />
         </nav>
-      <div className="Introduction">  
-        <p>Aca esta un parrafo</p>
+      <div className="Introduction">
       </div>
       </div>
     );

@@ -1,17 +1,21 @@
 .subMenu{
     position: relative;
-    bottom: 45px;
+    bottom: 46px;
     right: 15px;
     z-index: 3;
     color:rgb(235, 255, 230);
     display: flex;
     flex-direction: row;
     visibility: hidden;
-    justify-content: center;
-    
+    justify-content: center
 }
 
-.SubMenuIndividual{
+
+
+.SubMenuIndividualSites,
+.SubMenuIndividualBenefits,
+.SubMenuIndividualGalery,
+.SubMenuIndividualSubcription{
     background-color:black;
     padding: 5px;
     margin:10px 0px;
@@ -39,7 +43,7 @@ li{
 #subSubcription,
 #subSites,
 #subBenefits{
-    background: content-box;
+    /* background: content-box; */
     border-radius: 15px;
     background-color: rgba(20, 22, 20, 0.5);
     position: relative;

@@ -9,9 +9,9 @@ let arrayMenu = [
         menu: 'Sites'
     },
     {
-        key: 2,
-        id: 'benefis',
-        menu:'Benefis'
+        key: 2, 
+        id: 'benefits',
+        menu:'Benefits'
     },
     {
         key: 3,
@@ -30,24 +30,34 @@ let arrayMenu = [
     }
 ]
 
-const subSites = document.getElementById('subSites');
-
 class ElementosNav extends React.Component{
     
-    handleEventMouseOver(e){
-        e.target.style.color = "rgb(135, 241, 144)";
+    handleEventMouseOver(Event){
+        Event.target.style.color = "rgb(135, 241, 144)";
 
-        if(e.target.id == 'sites'){
+        if(Event.target.id == 'sites'){
             document.getElementById('subSites').style.visibility ='visible';
-        }
+        } else if (Event.target.id == 'benefits') {
+            document.getElementById('subBenefits').style.visibility ='visible';
+        } else if (Event.target.id == 'subcription') {
+            document.getElementById('subSubcription').style.visibility ='visible';
+        }else if (Event.target.id == 'galery') {
+            document.getElementById('subGalery').style.visibility ='visible';
+        } 
     };
 
-    handlerEventMouseOut(e){
-        e.target.style.color = "rgb(235, 255, 230)";
+    handlerEventMouseOut(Event){
+        Event.target.style.color = "rgb(235, 255, 230)";
 
-        if(e.target.id == 'sites'){
+        if(Event.target.id == 'sites'){
             document.getElementById('subSites').style.visibility = 'hidden';
-        }
+        }else if (Event.target.id == 'benefits') {
+            document.getElementById('subBenefits').style.visibility ='hidden';
+        }else if (Event.target.id == 'subcription') {
+            document.getElementById('subSubcription').style.visibility ='hidden';
+        }else if (Event.target.id == 'galery') {
+            document.getElementById('subGalery').style.visibility ='hidden';
+        } 
 
     };
 
