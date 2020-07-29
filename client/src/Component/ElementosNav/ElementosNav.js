@@ -1,6 +1,6 @@
 import React from 'react';
 import './ElementosNav.css';
-import SubMenu from '../subMenu/subMenu' 
+import SubMenu from '../SubMenu/SubMenu' 
 
 let arrayMenu = [
     {

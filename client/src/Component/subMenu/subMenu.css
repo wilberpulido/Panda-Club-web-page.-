@@ -12,10 +12,10 @@
 
 
 
-.SubMenuIndividualSites,
-.SubMenuIndividualBenefits,
-.SubMenuIndividualGalery,
-.SubMenuIndividualSubcription{
+.individualSites,
+.individualBenefits,
+.individualGalery,
+.individualSubcription{
     background-color:black;
     padding: 5px;
     margin:10px 0px;
