@@ -1,3 +1,6 @@
+Proyecto realizado con el fin de mejorar mis habilidades como programador.
+Pagina web de un club de pandas ficticio.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
