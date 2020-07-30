@@ -6,7 +6,10 @@ class Navegador extends React.Component{
     render(){
         return(
       <div>
-          <ElementosNav/>
+          <ElementosNav changedColor={this.props.changedColor}
+            unChangedColor={this.props.unChangedColor}
+            handlerMouseOver={this.props.handlerMouseOver}
+            handlerMouseOut={this.props.handlerMouseOut}/>
       </div>
         )
     }

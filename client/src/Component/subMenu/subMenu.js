@@ -4,74 +4,60 @@ import subMenuObj from './subMenuObj';
 
 
 class SubMenu extends React.Component{
-    
-    handlerEventMouseOverSubMenu(Event){
-        if (Event.target.id == 'subSites' || Event.target.className == 'individualSites') {
-            document.getElementById('subSites').style.visibility='visible';
-
-        }else if (Event.target.id == 'subBenefits' || Event.target.className == 'individualBenefits') {
-            document.getElementById('subBenefits').style.visibility='visible';
-
-        }else if (Event.target.id == 'subSubcription' || Event.target.className == 'individualSubcription') {
-            document.getElementById('subSubcription').style.visibility='visible';
-            
-        }else if (Event.target.id == 'subGalery' || Event.target.className == 'individualGalery') {
-            document.getElementById('subGalery').style.visibility='visible';
-        }
-    }
-
-    handlerEventMouseOutSubMenu(Event){
-        if (Event.target.id == 'subSites' || Event.target.className == 'individualSites') {
-            document.getElementById('subSites').style.visibility='hidden';
-        }else if (Event.target.id == 'subBenefits' || Event.target.className == 'individualBenefits') {
-            document.getElementById('subBenefits').style.visibility='hidden';
-
-        }else if (Event.target.id == 'subSubcription' || Event.target.className == 'individualSubcription') {
-            document.getElementById('subSubcription').style.visibility='hidden';
-        }else if (Event.target.id == 'subGalery' || Event.target.className == 'individualGalery') {
-            document.getElementById('subGalery').style.visibility='hidden';
-        }
-    }
 
     render(){
         return (
             <div className='subMenu'>
 
-                <ul id ='subSites' onMouseOver={this.handlerEventMouseOverSubMenu}
-                    onMouseOut={this.handlerEventMouseOutSubMenu}>
+                <ul id ='subSites'
+                onMouseOver={this.props.handlerMouseOver}
+                onMouseOut={this.props.handlerMouseOut}>
                     {subMenuObj.sites.map(site=>{
                     return <li className='individualSites'
-                            key={site.key}>{site.site}</li>
+                            onMouseOver={this.props.changedColor}
+                            onMouseOut={this.props.unChangedColor}
+                            key={site.key}>{site.site}
+                            </li>
                     })
                     }
                 </ul>
 
-                <ul id ='subBenefits' onMouseOver={this.handlerEventMouseOverSubMenu}
-                onMouseOut={this.handlerEventMouseOutSubMenu}>
+                <ul id ='subBenefits'
+                onMouseOver={this.props.handlerMouseOver}
+                onMouseOut={this.props.handlerMouseOut}>
                     {subMenuObj.benefits.map(benefit=>{
                     return <li className='individualBenefits'
-                            key={benefit.key}>{benefit.benefit}</li>
+                            onMouseOver={this.props.changedColor}
+                            onMouseOut={this.props.unChangedColor}
+                            key={benefit.key}>{benefit.benefit}
+                            </li>
                     })
                     }
                 </ul>
-
                 <ul>
-                    <li> <img id="logo" src='https://www.dw.com/image/39558053_403.jpg'/> </li>
+                    <li>
+                    <img id="logo" src='https://www.dw.com/image/39558053_403.jpg'/> 
+                    </li>
                 </ul>
-
-                <ul id ='subSubcription' onMouseOver={this.handlerEventMouseOverSubMenu}
-                onMouseOut={this.handlerEventMouseOutSubMenu}>
+                <ul id ='subSubcription'
+                onMouseOver={this.props.handlerMouseOver}
+                onMouseOut={this.props.handlerMouseOut}>
                     {subMenuObj.subcription.map(planes=>{
                     return <li className='individualSubcription'
+                            onMouseOver={this.props.changedColor}
+                            onMouseOut={this.props.unChangedColor}
                             key={planes.key}>{planes.plan}</li>
                     })
                     }
                 </ul>
 
-                <ul id ='subGalery' onMouseOver={this.handlerEventMouseOverSubMenu}
-                onMouseOut={this.handlerEventMouseOutSubMenu}>
+                <ul id ='subGalery'
+                onMouseOver={this.props.handlerMouseOver}
+                onMouseOut={this.props.handlerMouseOut}>
                     {subMenuObj.galery.map(dis=>{
                     return <li className='individualGalery'
+                            onMouseOver={this.props.changedColor}
+                            onMouseOut={this.props.unChangedColor}
                             key={dis.key}>{dis.display}</li>
                     })
                     }
