@@ -43,7 +43,7 @@ li{
 #subSubcription,
 #subSites,
 #subBenefits{
-    /* background: content-box; */
+    background: content-box;
     border-radius: 15px;
     background-color: rgba(20, 22, 20, 0.5);
     position: relative;

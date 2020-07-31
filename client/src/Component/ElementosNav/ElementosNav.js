@@ -8,24 +8,24 @@ class ElementosNav extends React.Component{
         return (
             <div>
                 <div>
-                    <ul className='menuPrincipal'>{
-                    arrayMenu.map(element=>{
-                        return <div 
+                    <ul className='menuPrincipal'> {
+                    arrayMenu.map((element)=>{
+                        return <div key={element.key}
                             onMouseOver={this.props.handlerMouseOver}
                             onMouseOut={this.props.handlerMouseOut}>
-                                <li id={element.id} key={element.key}
-                                className='listMenu'
+                                <li 
+                                id={element.id}
                                 onMouseOver={this.props.changedColor}
                                 onMouseOut={this.props.unChangedColor}
-                                >{element.menu}
+                                className='listMenu'>{element.menu}
                                 </li>
                         </div>
                         })
-                    } 
+                    }
                     </ul>
                 </div>
                 <div>
-                    <SubMenu 
+                    <SubMenu
                     changedColor= {this.props.changedColor} 
                     unChangedColor= {this.props.unChangedColor}
                     handlerMouseOver={this.props.handlerMouseOver}

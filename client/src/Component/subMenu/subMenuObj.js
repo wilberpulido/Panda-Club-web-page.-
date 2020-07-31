@@ -55,6 +55,5 @@ subMenuObj.galery=[
     key: 2
     }
 ]
-console.log('PRUEBA');
 
 export default subMenuObj;

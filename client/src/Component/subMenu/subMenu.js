@@ -16,7 +16,7 @@ class SubMenu extends React.Component{
                     return <li className='individualSites'
                             onMouseOver={this.props.changedColor}
                             onMouseOut={this.props.unChangedColor}
-                            key={site.key}>{site.site}
+                            key={site.key.toString()}>{site.site}
                             </li>
                     })
                     }
@@ -36,7 +36,7 @@ class SubMenu extends React.Component{
                 </ul>
                 <ul>
                     <li>
-                    <img id="logo" src='https://www.dw.com/image/39558053_403.jpg'/> 
+                    <img id="logo" src='https://www.dw.com/image/39558053_403.jpg' alt='logotipo principal'/> 
                     </li>
                 </ul>
                 <ul id ='subSubcription'
