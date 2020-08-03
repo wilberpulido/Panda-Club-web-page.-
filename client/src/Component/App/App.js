@@ -3,14 +3,7 @@ import Navegador from '../Navegador/Navegador'
 import './App.css';
 
 class App extends React.Component{
-  
-  constructor(props){
-    super(props);
-    this.state = ({
-      customers:[]
 
-    })
-   }
   changedColor(event){
     event.target.style.color = "rgb(135, 241, 144)";
   }

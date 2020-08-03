@@ -1,26 +1,16 @@
 import React from 'react';
 import './Navegador.css';
-import ElementosNav from '../ElementosNav/ElementosNav';
 import ElementNav from '../ElementNav/ElementNav';
-
-// const elementosNav=[
-//   {menuPrincipal: ['Sites','Benefits','Panda CLUB','Subcription','Galery']}
-// ];
+import menuObj from './menuObj';
 
 class Navegador extends React.Component{
     render(){
-        return(<div>
-          <ElementosNav
-            changedColor={this.props.changedColor}
-            unChangedColor={this.props.unChangedColor}
-            handlerMouseOver={this.props.handlerMouseOver}
-            handlerMouseOut={this.props.handlerMouseOut}/>
-
-      <div className='elemenosNavNuevos'>
-      
-      <ElementNav/>
-
-      </div>
+        return(<div className='elemenosNavNuevos'>
+        <ElementNav menu={menuObj.sites}/>
+        <ElementNav menu={menuObj.benefits}/>
+        <ElementNav menu={menuObj.pandaClub}/>
+        <ElementNav menu={menuObj.subcription}/>
+        <ElementNav menu={menuObj.galery}/>
       </div>
       )
     }

@@ -1,21 +1,26 @@
-.elementNav{
-    width: 150px;
+.menuPrincipal{
     padding: 12px;
-    margin: 25px 25px;
-    text-align: center;
-    cursor: pointer;
-    background-color: rgb(0,0,0,0.5);
+    margin: 10px 10px;
     border-radius: 15px;
-    font-size: 16px;
 }
-#mpPandaClub,
-.mSegundario,
-.mPrincipal{
-    border-radius: 15px;
-    background-color:black;
-    padding: 5px;
+.menuSecundario{
+    padding: 10px 10px;
     margin-bottom: 10px;
 }
-#mpPandaClub{
-    margin: 0px;
+
+.menuPrincipal,
+.menuSecundario{
+    background-color:black;
+    cursor: pointer;
+    list-style: none;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.elementNav{
+    background-color: rgb(0,0,0,0.5);
+    width: 160px;
+    border-radius: 15px;
+    padding:2px 5px 5px 5px;
+    margin: 17px 10px;
 }
