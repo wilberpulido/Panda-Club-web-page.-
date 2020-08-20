@@ -11,11 +11,10 @@ class App extends React.Component{
     event.target.style.color = "rgb(235, 255, 230)";
   }
   handlerMouseOver(event){
-
     if(
-      event.target.id === 'sites'||
-      event.target.id === 'subSites'||
-      event.target.className === 'individualSites'){
+      event.target.id==='Sites'||
+      event.target.className==='elementNav'||
+      event.target.className==='individualSites'){
         document.getElementById('subSites').style.visibility ='visible';
 
     }else if (
